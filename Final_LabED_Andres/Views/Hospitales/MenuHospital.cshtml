@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "MenuHospital";
+}
+<p></p>
+<p></p>
+<h2>Hospital de @ViewBag.Hospital</h2>
+<h3>Menú</h3>
+
+
+@using (Html.BeginForm())
+{
+    string name_h = ViewBag.Hospital;
+<p> @Html.ActionLink("Infectados", "Infectados", new { hosp = name_h })</p>  
+<p>@Html.ActionLink("Sospechosos", "Sospechosos", new { hosp = name_h })</p>  
+}
+
+<div>
+    @Html.ActionLink("Regresar al menú principal", "Index", "Home")
+</div>
